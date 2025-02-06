@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple Bootstrap avec Colonnes et Grilles</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        /* Ajout de styles personnalisés */
+        .header-section {
+            background-color: #edeff0;
+            color: #e3782c;
+            padding: 1.5rem;
+            text-align: left;
+        }
+        
+        .footer-section {
+            background-color: #c44924;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            clear: both;
+        }
+        
+        /* Styles pour les colonnes */
+        .col-container {
+            padding: 100px;
+            
+        }
+        
+        .col-1 {
+            background-color: #f1c40f; /* Jaune */
+            color: #0d0c0c;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .col-2 {
+            background-color: #2c3e50; /* Bleu foncé */
+            color: hsl(0, 7%, 3%);
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .col-3 {
+            background-color: #8ab2b5; /* Gris */
+            color: #0d0303;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        /* Pour les hauteurs égales des colonnes */
+        .row-eq-height {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .row-eq-height > [class*='col-'] {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .content-col {
+            flex: 1;
+            padding: 20px;
+        }
+        .form-floating {
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            clear: both;
+        }
+        .form-select {
+            background-color: #edeff0;
+            color: rgb(27, 98, 139);
+            padding: 1rem;
+            text-align: left;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header-section">
+    <h2>Ardoise</h2>
+</div>
+
+<div>
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Brighspace</option>
+        <option value="1">Progrès de la classe</option>
+        <option value="2">Calendrier</option>
+        <option value="3">Aide</option>
+      </select>
+</div>
+
+
+<div class="container-fluid col-container">
+    <div class="row row-eq-height">
+        <div class="col-md-4 col-1">
+            <div class="content-col">
+                
+                <div class="card" style="width: 18rem;">
+                    <img src="image1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">ELTE 1072</p>
+                    </div>
+                  </div>
+                <h3>Jimmy</h3>
+            </div>
+        </div>
+        <div class="col-md-4 col-2">
+            <div class="content-col">
+
+                <div class="card" style="width: 18rem;">
+                    <img src="image2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">PROG 1354</p>
+                    </div>
+                  </div>
+                <h3>YAHYA</h3>
+            </div>
+        </div>
+        <div class="col-md-4 col-3">
+            <div class="content-col">
+
+                <div class="card" style="width: 18rem;">
+                    <img src="image3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">PROG 1355</p>
+                    </div>
+                  </div>
+                <h3>Arnis</h3>
+                <p>Ma troisième colonne</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="form-floating">
+    <textarea class="form-control" placeholder="Jeudi 06 Fevrier 2025" id="floatingTextarea"></textarea>
+  </div>
+
+<div class="footer-section">
+    <p>Pieds de page</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script
